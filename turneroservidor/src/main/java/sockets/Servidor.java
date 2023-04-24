@@ -23,7 +23,7 @@ public class Servidor extends ConexionSockets {
     public void StartServer() throws IOException {
 
         try {
-            System.out.println("Esperando por una Conexión...");
+            System.out.println("Turno actual: " + numeroTurno);
 
             while (true) {
                 // Espera a que un cliente se conecte
