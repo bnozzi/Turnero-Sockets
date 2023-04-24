@@ -13,12 +13,15 @@ El programa servidor permite la conexion de multiples programas clientes.
 Para implementar las múltiples conexiones al servidor, se utilizó la clase `Thread`. Cada conexión de cliente se gestiona mediante un hilo individual para permitir que el servidor atienda múltiples solicitudes al mismo tiempo.
 
 Asi se ve el servidor iniciado:
+
 ![Servidor Iniciado](./screenshots/servidorIniciado.png)
 
 Una vez iniciado el programa servidor los programas cliente podran conectarse a él y enviar mensajes. En este caso opte por que sea posible enviar cualquier mensaje. Una vez recibidos el servidor actualizará el numero de turno y le respondera al cliente que la peticion fue realizada con exito. 
+
 ![Mensajes](./screenshots/mensajes.png)
 
 Si un cliente envía el mensaje "fin", se cierra la conexión de todos los sockets cliente y se detiene el servidor. El único problema es que los clientes restantes esperan completar la instrucción `scanner.nextLine()` antes de cerrar el socket.
+
 ![Fin Servidor](./screenshots/cierreServidor.png)
 
 A través de este proyecto aprendí sobre la comunicacion entre procesos independientes con el uso de sockets para la comunicación en red, el manejo de peticiones de múltiples conexiones y la implementación de un servidor y clientes en Java.
